@@ -5,6 +5,6 @@ const router = express.Router();
 const { getJobs } = require("../controllers/jobs");
 
 // routes
-router.post("/getJobs", getJobs);
+router.get("/getJobs", getJobs);
 
 module.exports = router;
