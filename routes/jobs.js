@@ -6,12 +6,12 @@ const { authCheck } = require("../middlewares/auth");
 
 // controller
 const {
-  getUsersJobs,
-  createUsersJob,
-  getJobs,
-  deleteJob,
-  getSingleJob,
-  updateJob,
+	getUsersJobs,
+	createUsersJob,
+	getJobs,
+	deleteJob,
+	getSingleJob,
+	updateJob,
 } = require("../controllers/jobs");
 
 // routes
