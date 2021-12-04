@@ -48,8 +48,13 @@ exports.createUsersJob = async (req, res) => {
 };
 
 exports.getSingleJob = async (req, res) => {
-	const job = await Jobs.findOne({ slug: req.params.slug }).exec();
-	res.json(job);
+	try {
+		const job = await Jobs.findOne({ slug: req.params.slug }).exec();
+		res.json(job);
+	} catch (err) {
+		console.log(err);
+		res.status(400).json({ err: err.message });
+	}
 };
 
 exports.updateJob = async (req, res) => {

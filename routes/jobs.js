@@ -18,7 +18,7 @@ const {
 router.post("/user/create", authCheck, createUsersJob);
 router.get("/user/jobs", authCheck, getUsersJobs);
 router.get("/jobs", authCheck, getJobs);
-router.get("/job/:slug", getSingleJob);
+router.get("/job/:slug", authCheck, getSingleJob);
 router.put("/job/:slug", authCheck, updateJob);
 router.delete("/job/:slug", authCheck, deleteJob);
 
