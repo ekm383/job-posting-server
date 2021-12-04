@@ -10,6 +10,5 @@ const { createOrUpdateUser, currentUser } = require("../controllers/auth");
 // routes
 router.post("/create-or-update-user", authCheck, createOrUpdateUser);
 router.post("/current-user", authCheck, currentUser);
-router.post("/current-admin", authCheck, currentUser);
 
 module.exports = router;
